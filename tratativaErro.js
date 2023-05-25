@@ -42,3 +42,4 @@ const run = (isAccountant, blocoNome) => {
     return "Agradecemos o seu contato!!";
   }
 };
+console.log(run(1, "teste"))

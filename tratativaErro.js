@@ -29,6 +29,8 @@ const fun = (isAccountant, blocoNome) => {
         if (tratativa[i].bloco == blocoNome) {
           // Retorna a frase correspondente ao 'blocoNome' encontrado
           return tratativa[i].frase;
+        }else{
+          return "Não consegui entender 😕"
         }
       }
       
@@ -39,6 +41,8 @@ const fun = (isAccountant, blocoNome) => {
         if (tratativa[i].bloco == blocoNome) {
           // Retorna uma mensagem com base na frase correspondente ao 'blocoNome', removendo os primeiros 45 caracteres
           return "Poxa, ainda não consegui identificar seu" + tratativa[i].frase.substring(45);
+        }else{
+          return "Não consegui entender 😕"
         }
       }
 
@@ -49,4 +53,4 @@ const fun = (isAccountant, blocoNome) => {
 };
 
 // Exemplo de uso
-//console.log(fun("3", "nome"));
+console.log(fun("2", "pato"));

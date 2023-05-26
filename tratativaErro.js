@@ -1,6 +1,5 @@
 // Nome: Marcos Sousa  Data de criacao: 25/05/2023
 
-
 /**
  * Instruções:
  * O script recebe um valor 'isAccountant' e um valor 'blocoNome'.
@@ -14,7 +13,7 @@
 
 const fun = (isAccountant, blocoNome) => {
   // Declaração de uma variável chamada 'tratativa' que contém um array de objetos
-  var tratativa = [
+  const tratativa = [
     { bloco: "nome", frase: "Ops! Parece que você digitou erroneamente seu nome." },
     { bloco: "cpf", frase: "Ops! Parece que você digitou erroneamente seu CPF." },
     { bloco: "cnpj", frase: "Ops! Parece que você digitou erroneamente seu CNPJ." },
@@ -24,27 +23,27 @@ const fun = (isAccountant, blocoNome) => {
   switch (isAccountant) {
     case "1":
       // Percorre o array 'tratativa' usando um loop 'for'
-      for (var i = 0; i < tratativa.length; i++) {
+      for (let i = 0; i < tratativa.length; i++) {
         // Verifica se o valor da propriedade 'bloco' do objeto atual é igual a 'blocoNome'
-        if (tratativa[i].bloco == blocoNome) {
+        if (tratativa[i].bloco === blocoNome) {
           // Retorna a frase correspondente ao 'blocoNome' encontrado
           return tratativa[i].frase;
-        }else{
-          return "Não consegui entender 😕"
         }
       }
+      // Se nenhum correspondente for encontrado, retorna a mensagem padrão
+      return "Não consegui entender 😕";
       
     case "2":
       // Percorre o array 'tratativa' usando um loop 'for'
-      for (var i = 0; i < tratativa.length; i++) {
+      for (let i = 0; i < tratativa.length; i++) {
         // Verifica se o valor da propriedade 'bloco' do objeto atual é igual a 'blocoNome'
-        if (tratativa[i].bloco == blocoNome) {
+        if (tratativa[i].bloco === blocoNome) {
           // Retorna uma mensagem com base na frase correspondente ao 'blocoNome', removendo os primeiros 45 caracteres
           return "Poxa, ainda não consegui identificar seu" + tratativa[i].frase.substring(45);
-        }else{
-          return "Não consegui entender 😕"
         }
       }
+      // Se nenhum correspondente for encontrado, retorna a mensagem padrão
+      return "Não consegui entender 😕";
 
     default:
       // Retorna uma mensagem de agradecimento se 'isAccountant' não for igual a "1" nem a "2"
@@ -53,4 +52,4 @@ const fun = (isAccountant, blocoNome) => {
 };
 
 // Exemplo de uso
-//console.log(fun("1", "pato"));
+// console.log(fun("3", "pato"));

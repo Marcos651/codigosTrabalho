@@ -53,4 +53,4 @@ const fun = (isAccountant, blocoNome) => {
 };
 
 // Exemplo de uso
-console.log(fun("2", "pato"));
+//console.log(fun("1", "pato"));

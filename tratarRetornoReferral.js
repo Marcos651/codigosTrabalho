@@ -396,6 +396,6 @@ function deleteProperties(obj) {
 
   let json = JSON.stringify(obj, null, 2);
   return json;
-}console.log(deleteProperties(instagramt));
+}console.log(deleteProperties(blip));
 
 
